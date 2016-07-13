@@ -12,7 +12,7 @@ class TestMongoConnectivity extends Specification{
     MongoClient mongoClient
     MongoCollection<Document> collection
     def setup(){
-        mongoClient = new MongoClient( "localhost" , 32771 );
+        mongoClient = new MongoClient( "localhost" , 27017 );
     }
     def "test connect" () {
         given: "we are connected to a local database"
