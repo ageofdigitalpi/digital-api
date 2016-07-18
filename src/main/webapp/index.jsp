@@ -5,6 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-Hello Fellow Hackerthonee again!
+<a href="./databaselistinfoservlet">List Mongo Databases</a>
 </body>
 </html>

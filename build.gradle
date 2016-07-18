@@ -10,7 +10,8 @@ apply plugin: 'war'
 apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 apply plugin: "org.sonarqube"
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
     mavenCentral()
@@ -31,4 +32,10 @@ sonarqube {
     properties {
         property "sonar.host.url", "\"$System.env.SONAR_ENDPOINT\""
     }
+}
+
+gretty {
+	port = 8081
+	contextPath = '/hackathon'
+	servletContainer = 'tomcat8'
 }
