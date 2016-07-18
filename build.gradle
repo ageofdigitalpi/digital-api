@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.hacka.thon'
-version 'teamapi-SNAPSHOT-0.1'
+version 'SNAPSHOT-0.1'
 
 apply plugin: 'groovy'
 apply plugin: 'war'
