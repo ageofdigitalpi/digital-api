@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.hacka.thon'
-version '1.0-SNAPSHOT'
+version 'cd ./'
 
 apply plugin: 'groovy'
 apply plugin: 'war'
@@ -29,6 +29,6 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.host.url", "\"$System.env.SONAR_ENDPOINT\""
     }
 }
