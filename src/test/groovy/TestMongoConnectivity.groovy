@@ -2,6 +2,8 @@ import com.mongodb.MongoClient
 import com.mongodb.client.MongoCollection
 import com.mongodb.client.MongoDatabase
 import org.bson.Document
+import spock.lang.Ignore
+
 import static com.mongodb.client.model.Filters.*;
 import spock.lang.Specification
 
@@ -11,9 +13,11 @@ import spock.lang.Specification
 class TestMongoConnectivity extends Specification{
     MongoClient mongoClient
     MongoCollection<Document> collection
+
     def setup(){
         mongoClient = new MongoClient( "localhost" , 27017 );
     }
+
     def "test connect" () {
         given: "we are connected to a local database"
             assert mongoClient != null
