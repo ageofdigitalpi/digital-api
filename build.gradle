@@ -29,7 +29,7 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.host.url", "\"$System.env.SONAR_ENDPOINT\""
+        property "sonar.host.url", "http://86.12.179.195:9000/"
     }
 }
 
