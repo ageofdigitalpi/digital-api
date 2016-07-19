@@ -27,12 +27,3 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-sonarqube {
-    properties {
-        property "sonar.host.url", "http://86.12.179.195:9000/"
-    }
-}
-
-test {
-    ignoreFailures = true
-}
