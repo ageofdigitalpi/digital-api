@@ -15,11 +15,11 @@ class TestMongoConnectivity extends Specification{
     MongoCollection<Document> collection
 
     def setup(){
-        mongoHost = System.getenv("MONGO_PORT_27017_TCP_ADDR");
+        String mongoHost = System.getenv("MONGO_PORT_27017_TCP_ADDR");
         int mongoPort = Integer.parseInt(System.getenv("MONGO_PORT_27017_TCP_PORT"));
 
 
-        MongoClient mongoClient = new MongoClient(mongoHost, mongoPort);
+        mongoClient = new MongoClient(mongoHost, mongoPort);
     }
 
     def "test connect" () {
