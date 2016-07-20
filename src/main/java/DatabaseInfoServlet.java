@@ -31,8 +31,12 @@ public class DatabaseInfoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
         System.out.println("Inside doGet method if DatabaseInfoServlet");
+
+        String mongoHost = System.getenv("MONGO_PORT_27017_TCP_ADDR");
+        int mongoPort = Integer.parseInt(System.getenv("MONGO_PORT_27017_TCP_PORT"));
+
         
-        MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+        MongoClient mongoClient = new MongoClient(mongoHost, mongoPort);
         
         writer.println("<!DOCTYPE html>");
         writer.println("<html>");
