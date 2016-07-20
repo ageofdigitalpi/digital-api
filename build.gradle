@@ -38,3 +38,4 @@ tasks.withType(org.gradle.api.tasks.testing.Test) {
     systemProperty 'MONGO_PORT_27017_TCP_ADDR', 'localhost'
     systemProperty 'MONGO_PORT_27017_TCP_PORT', '27017'
 }
+
